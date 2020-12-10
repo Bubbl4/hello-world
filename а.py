@@ -1,0 +1,20 @@
+from selenium import webdriver
+import time
+browser = webdriver.Firefox(executable_path='/home/elliasq/work/geckodriver')
+for i in range(10):
+    browser.get('http://euroopt.shop/274792/tg')
+    time.sleep(5)
+    question_1 = browser.find_element_by_link_text('ДА')
+    time.sleep(5)
+    question_1.click()
+    question_2 = browser.find_element_by_link_text('ДА')
+    time.sleep(5)
+    question_2.click()
+    question_3 = browser.find_element_by_link_text('ДА')
+    time.sleep(5)
+    question_3.click()
+    question_4 = browser.find_element_by_name('reg')
+    time.sleep(5)
+    question_4.click()
+    time.sleep(10)
+    browser.quit()
